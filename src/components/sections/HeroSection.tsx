@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/hero-humanitarian.jpg';
+import logoImage from '@/assets/logo-bsf.jpeg';
 
 export function HeroSection() {
   return (
@@ -18,8 +19,14 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto space-y-8">
-          {/* Small decorative line */}
-          <div className="divider-gold opacity-0 animate-fade-up" />
+          {/* Logo */}
+          <div className="opacity-0 animate-fade-up">
+            <img 
+              src={logoImage} 
+              alt="Barberos Sin Fronteras Logo" 
+              className="w-32 h-32 md:w-40 md:h-40 mx-auto object-contain"
+            />
+          </div>
           
           {/* Main Title */}
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-foreground opacity-0 animate-fade-up delay-100">
