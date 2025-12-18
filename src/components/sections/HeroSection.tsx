@@ -20,18 +20,13 @@ export function HeroSection() {
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Logo */}
-          <div className="opacity-0 animate-fade-up">
+          <div className="opacity-0 animate-fade-up -mt-16">
             <img 
               src={logoImage} 
               alt="Barberos Sin Fronteras Logo" 
-              className="w-32 h-32 md:w-40 md:h-40 mx-auto object-contain"
+              className="w-36 h-36 md:w-44 md:h-44 mx-auto object-contain brightness-75 contrast-110 -rotate-40"
             />
           </div>
-          
-          {/* Main Title */}
-          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-foreground opacity-0 animate-fade-up delay-100">
-            Barberos Sin Fronteras
-          </h1>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl lg:text-3xl font-display italic text-primary opacity-0 animate-fade-up delay-200">
