@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/hero-humanitarian.jpg';
-import logoImage from '@/assets/logo-bsf.jpeg';
+import logoImage from '@/assets/logo-bsf.png';
 
 export function HeroSection() {
   return (
