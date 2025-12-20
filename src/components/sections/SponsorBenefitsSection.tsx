@@ -26,6 +26,13 @@ const benefits = [
 ];
 
 export function SponsorBenefitsSection() {
+  const scrollToForm = () => {
+    const formSection = document.getElementById('contact-form');
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="section-padding bg-background">
       <div className="container mx-auto px-6">
@@ -62,7 +69,7 @@ export function SponsorBenefitsSection() {
         </div>
 
         <AnimatedSection delay={400} className="text-center">
-          <Button variant="gold" size="xl">
+          <Button variant="gold" size="xl" onClick={scrollToForm}>
             Solicitar Alianza Estratégica
           </Button>
         </AnimatedSection>
