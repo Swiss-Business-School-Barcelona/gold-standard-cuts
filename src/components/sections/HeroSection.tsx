@@ -31,7 +31,7 @@ export function HeroSection() {
             <img 
               src={logoImage} 
               alt="Barberos Sin Fronteras Logo" 
-              className="w-36 h-36 md:w-44 md:h-44 mx-auto object-contain brightness-75 contrast-110 -rotate-40"
+              className="w-48 h-48 md:w-56 md:h-56 mx-auto object-contain drop-shadow-2xl"
             />
           </div>
 
