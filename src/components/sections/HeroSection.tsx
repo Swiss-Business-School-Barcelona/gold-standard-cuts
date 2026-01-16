@@ -3,6 +3,13 @@ import heroImage from '@/assets/hero-humanitarian.jpg';
 import logoImage from '@/assets/logo-bsf.png';
 
 export function HeroSection() {
+  const scrollToForm = () => {
+    const formSection = document.getElementById('contact-form');
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -24,7 +31,7 @@ export function HeroSection() {
             <img 
               src={logoImage} 
               alt="Barberos Sin Fronteras Logo" 
-              className="w-36 h-36 md:w-44 md:h-44 mx-auto object-contain brightness-75 contrast-110 -rotate-40"
+              className="w-48 h-48 md:w-56 md:h-56 mx-auto object-contain drop-shadow-2xl"
             />
           </div>
 
@@ -40,10 +47,10 @@ export function HeroSection() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8 opacity-0 animate-fade-up delay-400">
-            <Button variant="hero" size="xl">
+            <Button variant="hero" size="xl" onClick={scrollToForm}>
               Unirme al Movimiento
             </Button>
-            <Button variant="heroOutline" size="xl">
+            <Button variant="heroOutline" size="xl" onClick={scrollToForm}>
               Quiero Ser Patrocinador
             </Button>
           </div>

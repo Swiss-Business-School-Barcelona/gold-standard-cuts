@@ -2,6 +2,13 @@ import { AnimatedSection } from '@/components/AnimatedSection';
 import { Button } from '@/components/ui/button';
 
 export function ClosingSection() {
+  const scrollToForm = () => {
+    const formSection = document.getElementById('contact-form');
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="section-padding bg-background relative overflow-hidden">
       {/* Background effects */}
@@ -25,12 +32,35 @@ export function ClosingSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="xl">
+            <Button variant="hero" size="xl" onClick={scrollToForm}>
               Unirme al Movimiento
             </Button>
-            <Button variant="gold" size="xl">
+            <Button variant="gold" size="xl" onClick={scrollToForm}>
               Crear Alianza de Legado
             </Button>
+          </div>
+        </AnimatedSection>
+
+        {/* Contact Form */}
+        <AnimatedSection className="max-w-4xl mx-auto mt-24" id="contact-form">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-display text-foreground mb-4">
+              Contáctanos
+            </h3>
+            <p className="text-muted-foreground">
+              Completa el formulario para unirte al movimiento o crear una alianza.
+            </p>
+          </div>
+          <div className="rounded-lg overflow-hidden border border-border/20">
+            <iframe 
+              className="airtable-embed" 
+              src="https://airtable.com/embed/appY1IFwghYB6zRQT/pagPIx7QxVb21ofhg/form" 
+              frameBorder="0"
+              width="100%" 
+              height="533" 
+              style={{ background: 'transparent' }}
+              title="Formulario de Contacto"
+            />
           </div>
         </AnimatedSection>
       </div>
